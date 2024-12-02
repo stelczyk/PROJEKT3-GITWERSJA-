@@ -1,13 +1,15 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
 
-// Deklaracje zmiennych globalnych z functions.c
+#include<stdio.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+// Deklaracje zmiennych globalnych z functions.cpp
 extern int n;           // Rozmiar wektora
 extern int m;           // Liczba wektorów
 extern double* vectors; // Tablica przechowująca wszystkie wektory
 extern double* result;  // Wektor wynikowy
 
-// Deklaracje funkcji z functions.c
+// Deklaracje funkcji z functions.cpp
 void allocate_memory();
 void free_memory();
 void read_dimensions(FILE* file);
@@ -15,7 +17,7 @@ void read_vectors(FILE* file);
 void write_vector(FILE* file, const double* vector, int size);
 void select_and_sum_vectors();
 
-// Deklaracje funkcji z errors.c
+// Deklaracje funkcji z errors.cpp
 void handle_file_error(FILE* file, const char* filename);
 
 int main() {
